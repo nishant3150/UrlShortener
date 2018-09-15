@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+facebook: 
+  id: 1
+  name: 'Facebook'
+  original_url: 'http://facebook.com'
+  unique_key: 'beiw6'
+  shortened_url: 'http://demo-url-shortener.herokuapp.com/s/beiw6'
+  hit_count: '2'
+
+google:
+  id: 2
+  name: 'Google'
+  original_url: 'http://google.co.in'
+  unique_key: 'sgaw2'
+  shortened_url: 'http://demo-url-shortener.herokuapp.com/s/sgaw2'
+  hit_count: '2'

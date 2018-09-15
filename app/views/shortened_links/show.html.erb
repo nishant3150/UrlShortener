@@ -1,0 +1,23 @@
+<h1>Showing Shortened Link</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Original Url</th>
+      <th>Shortened Url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+    <td><%= @shortened_link.name %></td>
+    <td><%= @shortened_link.original_url %></td>
+    <td><%= link_to @shortened_link.shortened_url, @shortened_link.shortened_url %></td>
+    </tr>
+  </tbody>
+</table>
+
+<br/>
+<%= link_to 'Edit', edit_shortened_link_path(@shortened_link) %> |
+<%= link_to 'Back', shortened_links_path %>

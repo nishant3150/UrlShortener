@@ -1,0 +1,10 @@
+<h1>New Shortened Link</h1>
+<label>Name</label>
+<label class="new-tab-label">Url</label>
+<%= form_for @shortened_link, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :original_url %>
+  <%= f.submit "Create" %>
+<% end %>
+
+<%= link_to 'Back', shortened_links_path %>

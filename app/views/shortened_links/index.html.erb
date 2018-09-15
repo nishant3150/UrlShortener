@@ -1,0 +1,34 @@
+<h1>Shortened Links</h1>
+
+<% if flash[:success] -%>
+  <p class='success'><%= flash[:success] %></p>
+<% end -%>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Original Url</th>
+      <th>Shortened Url</th>
+      <th>Hit Counter</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shortened_links.each do |shortened_link| %>
+      <tr>
+        <td><%= shortened_link.name %></td>
+        <td><%= shortened_link.original_url %></td>
+        <td><%= link_to shortened_link.shortened_url, shortened_link.shortened_url, target: :_blank %></td>
+        <td><%= shortened_link.hit_count %></td>
+        <td><%= link_to 'Show', shortened_link %></td>
+        <td><%= link_to 'Edit', edit_shortened_link_path(shortened_link) %></td>
+        <td><%= button_to 'Destroy', shortened_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shortened Link', new_shortened_link_path %>
